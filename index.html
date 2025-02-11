@@ -58,10 +58,13 @@
                 },
                 interactivity: {
                     events: {
-                        onhover: { enable: true, mode: "grab" },
+                        onhover: { enable: true, mode: "grab" },  // 🟢 Fix: Particles now connect to mouse
                         onclick: { enable: true, mode: "push" }
                     },
-                    modes: { push: { particles_nb: 4 } }
+                    modes: { 
+                        grab: { distance: 200, line_linked: { opacity: 1 } }, // 🔵 Fix: Set grab distance
+                        push: { particles_nb: 4 } 
+                    }
                 }
             });
         });
