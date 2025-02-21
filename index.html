@@ -26,6 +26,30 @@
             z-index: 1;
             padding-top: 20vh;
         }
+        .faded-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: 40vh;
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+            padding: 20px;
+        }
+        .faded-box img {
+            max-width: 80%;
+            border-radius: 10px;
+        }
+        .faded-box p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -34,7 +58,10 @@
         <h1>Bamn</h1>
         <p>Coming Soon</p>
     </div>
-
+    <div class="faded-box">
+        <img src="your-image.jpg" alt="Description of image">
+        <p>Your text here</p>
+    </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             tsParticles.load("tsparticles", {
@@ -58,11 +85,11 @@
                 },
                 interactivity: {
                     events: {
-                        onhover: { enable: true, mode: "grab" },  // 🟢 Fix: Particles now connect to mouse
+                        onhover: { enable: true, mode: "grab" },
                         onclick: { enable: true, mode: "push" }
                     },
                     modes: { 
-                        grab: { distance: 200, line_linked: { opacity: 1 } }, // 🔵 Fix: Set grab distance
+                        grab: { distance: 200, line_linked: { opacity: 1 } },
                         push: { particles_nb: 4 } 
                     }
                 }
