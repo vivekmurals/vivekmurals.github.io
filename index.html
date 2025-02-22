@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Page</title>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/YOUR_FONT_AWESOME_KIT.js" crossorigin="anonymous"></script> 
     <style>
         body {
             margin: 0;
@@ -28,18 +29,18 @@
         }
         /* Faded Box for Image & Text */
         .faded-box {
-            background: rgba(255, 255, 255, 0.1); /* Slight white transparency */
+            background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 10px;
             display: inline-block;
             text-align: center;
-            backdrop-filter: blur(10px); /* Soft blur effect */
+            backdrop-filter: blur(10px);
             margin-top: 20px;
         }
         .faded-box img {
-            max-width: 400px; /* Adjust size as needed */
+            max-width: 400px;
             height: auto;
-            border-radius: 10px; /* Keeps image rectangular with soft edges */
+            border-radius: 10px;
             display: block;
             margin: 0 auto;
         }
@@ -47,17 +48,46 @@
             margin-top: 10px;
             font-size: 18px;
         }
+        /* Social Icons */
+        .social-icons {
+            margin-top: 15px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #1e90ff; /* Change to your preferred hover color */
+        }
     </style>
 </head>
 <body>
     <div id="tsparticles"></div>
     
     <div class="content">
-
         <!-- Faded Box with Image & Text -->
         <div class="faded-box">
             <img src="Profile.png" alt="Profile Image">
             <p>My Name Here</p>
+            
+            <!-- Social Icons -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/YOUR_GITHUB" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:your.email@example.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="YourCV.pdf" target="_blank">
+                    <i class="fas fa-file"></i>
+                </a>
+            </div>
         </div>
     </div>
 
